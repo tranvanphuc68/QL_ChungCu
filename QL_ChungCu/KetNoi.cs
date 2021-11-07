@@ -16,7 +16,7 @@ namespace QL_ChungCu
 
         public void Ket_noi()
         {
-            string dtb = @"";
+            string dtb = "";
             conn = new SqlConnection(dtb);
             conn.Open();
         }

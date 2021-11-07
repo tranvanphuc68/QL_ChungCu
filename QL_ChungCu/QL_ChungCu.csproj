@@ -52,6 +52,24 @@
     <Compile Include="FrmBaiDoXe.Designer.cs">
       <DependentUpon>FrmBaiDoXe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHoDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoDan.Designer.cs">
+      <DependentUpon>FrmHoDan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHopDongThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHopDongThue.Designer.cs">
+      <DependentUpon>FrmHopDongThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKhoTaiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKhoTaiSan.Designer.cs">
+      <DependentUpon>FrmKhoTaiSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDanCu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +87,12 @@
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMatBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMatBang.Designer.cs">
+      <DependentUpon>FrmMatBang.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmQUANLY.cs">
       <SubType>Form</SubType>
@@ -91,6 +115,18 @@
     <Compile Include="KetNoi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBaiDoXe.resx">
+      <DependentUpon>FrmBaiDoXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHoDan.resx">
+      <DependentUpon>FrmHoDan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHopDongThue.resx">
+      <DependentUpon>FrmHopDongThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKhoTaiSan.resx">
+      <DependentUpon>FrmKhoTaiSan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDanCu.resx">
       <DependentUpon>FrmDanCu.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThongTinDichVu.resx">
       <DependentUpon>FrmThongTinDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMatBang.resx">
+      <DependentUpon>FrmMatBang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
