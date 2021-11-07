@@ -52,6 +52,18 @@
     <Compile Include="FrmBaiDoXe.Designer.cs">
       <DependentUpon>FrmBaiDoXe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDanCu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDanCu.Designer.cs">
+      <DependentUpon>FrmDanCu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDichVuDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDichVuDangKy.Designer.cs">
+      <DependentUpon>FrmDichVuDangKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +76,35 @@
     <Compile Include="FrmQUANLY.Designer.cs">
       <DependentUpon>FrmQUANLY.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThanhToanDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThanhToanDichVu.Designer.cs">
+      <DependentUpon>FrmThanhToanDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThongTinDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongTinDichVu.Designer.cs">
+      <DependentUpon>FrmThongTinDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="KetNoi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDanCu.resx">
+      <DependentUpon>FrmDanCu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDichVuDangKy.resx">
+      <DependentUpon>FrmDichVuDangKy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThanhToanDichVu.resx">
+      <DependentUpon>FrmThanhToanDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongTinDichVu.resx">
+      <DependentUpon>FrmThongTinDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
