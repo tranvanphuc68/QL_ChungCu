@@ -16,7 +16,7 @@ namespace QL_ChungCu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmHopDongThue());
+            Application.Run(new FrmLogin());
         }
     }
 }

@@ -67,9 +67,6 @@ namespace QL_ChungCu
             load();
         }
 
-
-        
-
         private void cbxMaMatBang_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM Mat_bang WHERE ma_MB = '" + cbxMaMatBang.Text + "'", ketNoi.conn);
@@ -83,10 +80,7 @@ namespace QL_ChungCu
                 txtDonGia.Text = (string)reader["don_gia"].ToString();
                 txtTrangThai.Text = (string)reader["trang_thai"].ToString();
             }
-            reader.Close();
-            
-        }
-
-       
+            reader.Close(); 
+        }   
     }
 }

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace QL_ChungCu
@@ -20,8 +19,6 @@ namespace QL_ChungCu
         }
 
         KetNoi ketNoi = new KetNoi();
-
-        
 
         public void get_kho_tai_san()
         {

@@ -16,7 +16,7 @@ namespace QL_ChungCu
 
         public void Ket_noi()
         {
-            string dtb = @"Data Source=COGL1KDVRKT2HIW;Initial Catalog=QLCC;Integrated Security=True";
+            string dtb = "";
             conn = new SqlConnection(dtb);
             conn.Open();
         }
