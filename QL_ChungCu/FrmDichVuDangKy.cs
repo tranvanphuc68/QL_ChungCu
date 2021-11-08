@@ -115,7 +115,7 @@ namespace QL_ChungCu
             }
             
 
-            if (DateTime.Now.Day == 8)
+            if (DateTime.Now.Day == 9)
             {
                 string query = "SELECT ma_ho, ma_DV FROM Dich_vu WHERE thang = '"+ month + "' AND nam = '" + year + "' AND trang_thai = 0";
                 DataTable table = conn.Lay_du_lieu(query);
@@ -131,13 +131,8 @@ namespace QL_ChungCu
                             conn.Thuc_thi("Insert into Dich_vu( ma_ho, ma_DV, thang, nam) " +
                                     "values('" + ma_ho + "', '" + ma_DV + "', MONTH(GETDATE()),YEAR(GETDATE()))");
                         }
-                    }
-                     
-                        
-                    
+                    }   
              }
-                
-         
         }
 
         private void FrmDichVuDangKy_Load(object sender, EventArgs e)
@@ -145,11 +140,34 @@ namespace QL_ChungCu
 
             Load_all();
             auto_CreateDV();
+            Load_HienThi();
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            conn.Thuc_thi("Insert into Dich_vu(ma_ho, ma_DV, thang, nam) values('" + cbbMaHo.SelectedValue + "', '" + cbbDV.SelectedValue + "', MONTH(GETDATE()),YEAR(GETDATE()))");
+            connect = new SqlConnection(dtb);
+            connect.Open();
+
+            string query = "SELECT COUNT(*)as 'count'  FROM Dich_vu WHERE ma_ho = '" + cbbMaHo.SelectedValue + "'AND ma_DV = '" + cbbDV.SelectedValue + "' AND thang = MONTH(GETDATE()) AND nam = YEAR(GETDATE()) ";
+            SqlCommand cmd = new SqlCommand(query, connect);
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string name = (string)reader["count"].ToString();
+                int count = int.Parse(name);
+                Console.WriteLine(count);
+                if (count == 0)
+                {
+                    conn.Thuc_thi("Insert into Dich_vu(ma_ho, ma_DV, thang, nam) values('" + cbbMaHo.SelectedValue + "', '" + cbbDV.SelectedValue + "', MONTH(GETDATE()),YEAR(GETDATE()))");
+                    MessageBox.Show("Đăng ký thành công dịch vụ " + cbbDV.Text + " cho hộ dân " + cbbMaHo.Text + "(" + txtChuHo.Text + ").");
+                }
+                else
+                {
+                    MessageBox.Show("Dịch vụ này đã đăng ký");
+                }
+            }
+
             
             Load_all();
         }
@@ -157,7 +175,20 @@ namespace QL_ChungCu
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            conn.Thuc_thi("Delete Dich_vu Where ma_HD_DV = '" + txtMaHDDV.Text + "'");
+       
+                string dv = (string)cbbDV.SelectedValue;
+            if (dv == "DV001" || dv == "DV002")
+            {
+                MessageBox.Show("Không thể hủy dịch vụ Dien/Nuoc.");
+            }
+            else
+            {
+                DialogResult tb = MessageBox.Show("Bạn có chắc muốn hủy dịch vụ " + cbbDV.Text + " của hộ dân " + cbbMaHo.Text + "(" + txtChuHo.Text + ") không?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (tb == System.Windows.Forms.DialogResult.Yes)
+                {
+                    conn.Thuc_thi("Delete Dich_vu Where ma_HD_DV = '" + txtMaHDDV.Text + "'");
+                }
+            }
             Load_all();
         }
 
@@ -165,7 +196,7 @@ namespace QL_ChungCu
         {
             DataTable table = new DataTable();
 
-            table = conn.Lay_du_lieu("Select ma_HD_DV as 'Mã hợp đồng', thanh_toan, Ho_dan.ma_ho as 'Mã hộ dân', ten_chu_ho as 'Chủ hộ', ten_DV as 'Dịch vụ', thang as 'Tháng', nam as 'Năm', CASE trang_thai WHEN '0' THEN 'Van su dung' WHEN '1' THEN 'Huy thang toi' END as 'Trạng thái' " +
+            table = conn.Lay_du_lieu("Select ma_HD_DV as 'Mã hợp đồng', trang_thai, Ho_dan.ma_ho as 'Mã hộ dân', ten_chu_ho as 'Chủ hộ', ten_DV as 'Dịch vụ', thang as 'Tháng', nam as 'Năm', CASE trang_thai WHEN '0' THEN 'Van su dung' WHEN '1' THEN 'Huy thang toi' END as 'Trạng thái' " +
                 "FROM Thong_tin_dich_vu, Dich_vu, Ho_dan " +
                 "WHERE Dich_vu.ma_DV = Thong_tin_dich_vu.ma_DV AND Ho_dan.ma_ho = Dich_vu.ma_ho " +
                     "AND ten_DV LIKE '%" + cbbDV.Text + "%' " +
@@ -201,7 +232,6 @@ namespace QL_ChungCu
             
             Load_all();
         }
-
         private void btnMove_Click(object sender, EventArgs e)
         {
             FrmThanhToanDichVu ttdv = new FrmThanhToanDichVu();
@@ -229,7 +259,6 @@ namespace QL_ChungCu
         {
             Load_HienThi();
         }
-
         private void btnAll_Click(object sender, EventArgs e)
         {
             Load_all();
