@@ -25,7 +25,7 @@ namespace QL_ChungCu
         public void Load_DanCu()
         {
             DataTable table = new DataTable();
-            table = conn.Lay_du_lieu("SELECT ma_HD_DV as 'Mã hợp đồng', thanh_toan, Ho_dan.ma_ho as 'Mã hộ dân', ten_chu_ho as 'Chủ hộ', ten_DV as 'Dịch vụ', he_so as 'Hệ số', he_so * don_gia as 'Tổng', thang as 'Tháng', nam as 'Năm', CASE thanh_toan WHEN '0' THEN 'Chưa thanh toán'WHEN '1' THEN 'Đã thanh toán' END as 'Trạng thái' " +
+            table = conn.Lay_du_lieu("SELECT ma_HD_DV as 'Mã hợp đồng', thanh_toan, Ho_dan.ma_ho as 'Mã hộ dân', ten_chu_ho as 'Chủ hộ', ten_DV as 'Dịch vụ', he_so as 'Hệ số', FORMAT(he_so *don_gia, '### ### ###') as 'Tổng', thang as 'Tháng', nam as 'Năm', CASE thanh_toan WHEN '0' THEN 'Chưa thanh toán'WHEN '1' THEN 'Đã thanh toán' END as 'Trạng thái' " +
                 "FROM Dich_vu, Ho_dan, Thong_tin_dich_vu " +
                 "WHERE Dich_vu.ma_DV = Thong_tin_dich_vu.ma_DV AND Ho_dan.ma_ho = Dich_vu.ma_ho;");
             dtGridViewDV.DataSource = table;
@@ -84,8 +84,8 @@ namespace QL_ChungCu
             cbbDV.DataBindings.Add("text", dtGridViewDV.DataSource, "Dịch vụ");
             txtHeso.DataBindings.Clear();
             txtHeso.DataBindings.Add("text", dtGridViewDV.DataSource, "Hệ số");
-            txtThanhToan.DataBindings.Clear();
-            txtThanhToan.DataBindings.Add("text", dtGridViewDV.DataSource, "Tổng");
+            //txtThanhToan.DataBindings.Clear();
+            //txtThanhToan.DataBindings.Add("text", dtGridViewDV.DataSource, "Tổng");
             chbStatus.DataBindings.Clear();
             chbStatus.DataBindings.Add("checked", dtGridViewDV.DataSource, "thanh_toan");
         }
@@ -109,6 +109,7 @@ namespace QL_ChungCu
         private void FrmThanhToanDichVu_Load(object sender, EventArgs e)
         {
             Load_all();
+            Load_HienThi();
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -122,7 +123,10 @@ namespace QL_ChungCu
             {
                 conn.Thuc_thi("UPDATE Dich_vu SET thanh_toan = '0' WHERE ma_HD_DV = '" + txtMaHDDV.Text + "'");
             }
+            MessageBox.Show("Cập nhật thành công hộ dân" + cbbMaHo.Text + "(" + txtChuHo.Text + ") dịch vụ " + cbbDV.Text + " tháng " + cbbMonth.SelectedValue + "/" + cbbYear.SelectedValue );
             Load_all();
+            
+            
         }
 
         private void cbbMaHo_SelectedIndexChanged(object sender, EventArgs e)
@@ -145,7 +149,7 @@ namespace QL_ChungCu
         {
             DataTable table = new DataTable();
             
-                table = conn.Lay_du_lieu("Select ma_HD_DV as 'Mã hợp đồng', thanh_toan, Ho_dan.ma_ho as 'Mã hộ dân', ten_chu_ho as 'Chủ hộ', ten_DV as 'Dịch vụ', he_so as 'Hệ số', he_so * don_gia as 'Tổng', thang as 'Tháng', nam as 'Năm',  CASE thanh_toan WHEN '0' THEN 'Chưa thanh toán'WHEN '1' THEN 'Đã thanh toán' END as 'Trạng thái' " +
+                table = conn.Lay_du_lieu("Select ma_HD_DV as 'Mã hợp đồng', thanh_toan, Ho_dan.ma_ho as 'Mã hộ dân', ten_chu_ho as 'Chủ hộ', ten_DV as 'Dịch vụ', he_so as 'Hệ số', FORMAT(he_so *don_gia, '### ### ###') as 'Tổng', thang as 'Tháng', nam as 'Năm',  CASE thanh_toan WHEN '0' THEN 'Chưa thanh toán'WHEN '1' THEN 'Đã thanh toán' END as 'Trạng thái' " +
                     "FROM Thong_tin_dich_vu, Dich_vu, Ho_dan " +
                     "WHERE Dich_vu.ma_DV = Thong_tin_dich_vu.ma_DV AND Ho_dan.ma_ho = Dich_vu.ma_ho " +
                         "AND ten_DV LIKE '%" + cbbDV.Text + "%' " +
@@ -153,7 +157,7 @@ namespace QL_ChungCu
                         "AND thang LIKE '%" + cbbMonth.SelectedValue + "%' " +
                         "AND nam LIKE '%" + cbbYear.SelectedValue + "%'");
 
-            
+
             /*else
             {
                 table = conn.Lay_du_lieu("Select ma_HD_DV as 'Mã hợp đồng', Ho_dan.ma_ho as 'Mã hộ dân', ten_chu_ho as 'Chủ hộ', ten_DV as 'Dịch vụ', he_so as 'Hệ số', he_so * don_gia as 'Tổng', thang as 'Tháng', nam as 'Năm', thanh_toan " +
@@ -165,7 +169,9 @@ namespace QL_ChungCu
                         "AND thang LIKE '%" + cbbMonth.SelectedValue + "%' " +
                         "AND nam LIKE '%" + cbbYear.SelectedValue + "%'");
             }*/
+            
             dtGridViewDV.DataSource = table;
+            Load_HienThi();
 
         }
 
@@ -187,12 +193,12 @@ namespace QL_ChungCu
             while (reader.Read())
             {
                 string don_gia = (string)reader["don_gia"].ToString();
-                int price = int.Parse(don_gia);
+                float price = float.Parse(don_gia);
                 if (txtHeso.Text != "")
                 {
-                    int he_so = int.Parse(txtHeso.Text);
+                    float he_so = float.Parse(txtHeso.Text);
 
-                    txtThanhToan.Text = (he_so * price).ToString();
+                    txtThanhToan.Text = (he_so * price).ToString("### ### ###");
                 }    
              
             }
