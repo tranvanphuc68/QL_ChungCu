@@ -39,8 +39,8 @@ namespace QL_ChungCu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(202, 155);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(202, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 41);
             this.label1.TabIndex = 0;
@@ -48,19 +48,21 @@ namespace QL_ChungCu
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUsername.Location = new System.Drawing.Point(380, 160);
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.txtUsername.Location = new System.Drawing.Point(380, 128);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(251, 38);
             this.txtUsername.TabIndex = 1;
             // 
             // btnLogIn
             // 
-            this.btnLogIn.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogIn.Font = new System.Drawing.Font("Showcard Gothic", 16.2F);
             this.btnLogIn.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnLogIn.Location = new System.Drawing.Point(349, 349);
+            this.btnLogIn.Location = new System.Drawing.Point(349, 279);
+            this.btnLogIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(138, 53);
+            this.btnLogIn.Size = new System.Drawing.Size(138, 42);
             this.btnLogIn.TabIndex = 2;
             this.btnLogIn.Text = "Log in";
             this.btnLogIn.UseVisualStyleBackColor = true;
@@ -68,8 +70,9 @@ namespace QL_ChungCu
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.Location = new System.Drawing.Point(380, 243);
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.txtPassword.Location = new System.Drawing.Point(380, 194);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(251, 38);
             this.txtPassword.TabIndex = 4;
@@ -78,8 +81,8 @@ namespace QL_ChungCu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(202, 238);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(202, 190);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 41);
             this.label2.TabIndex = 3;
@@ -87,10 +90,10 @@ namespace QL_ChungCu
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(814, 535);
+            this.ClientSize = new System.Drawing.Size(814, 428);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogIn);
@@ -98,9 +101,11 @@ namespace QL_ChungCu
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "FrmLogin";
-            this.Text = "FrmLogin";
+            this.Text = "ĐĂNG NHẬP";
             this.ResumeLayout(false);
             this.PerformLayout();
 

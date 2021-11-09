@@ -47,9 +47,11 @@ namespace QL_ChungCu
             this.label1 = new System.Windows.Forms.Label();
             this.chbStatus = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnMove = new System.Windows.Forms.Button();
             this.btnAll = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridViewDV)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
@@ -59,7 +61,7 @@ namespace QL_ChungCu
             this.label8.Location = new System.Drawing.Point(248, 24);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(522, 39);
+            this.label8.Size = new System.Drawing.Size(506, 38);
             this.label8.TabIndex = 63;
             this.label8.Text = "Đăng ký dịch vụ trong chung cư";
             // 
@@ -137,14 +139,15 @@ namespace QL_ChungCu
             // 
             // btnDel
             // 
+            this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(467, 262);
+            this.btnDel.Location = new System.Drawing.Point(315, 262);
             this.btnDel.Margin = new System.Windows.Forms.Padding(4);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(151, 36);
             this.btnDel.TabIndex = 52;
             this.btnDel.Text = "Hủy đăng ký";
-            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.UseVisualStyleBackColor = false;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnCreate
@@ -162,10 +165,10 @@ namespace QL_ChungCu
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(711, 85);
+            this.btnSearch.Location = new System.Drawing.Point(711, 80);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(100, 34);
+            this.btnSearch.Size = new System.Drawing.Size(98, 37);
             this.btnSearch.TabIndex = 54;
             this.btnSearch.Text = "Tìm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -229,17 +232,17 @@ namespace QL_ChungCu
             // 
             this.chbStatus.AutoSize = true;
             this.chbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbStatus.Location = new System.Drawing.Point(430, 203);
+            this.chbStatus.Location = new System.Drawing.Point(31, 20);
             this.chbStatus.Name = "chbStatus";
-            this.chbStatus.Size = new System.Drawing.Size(295, 29);
+            this.chbStatus.Size = new System.Drawing.Size(246, 29);
             this.chbStatus.TabIndex = 64;
-            this.chbStatus.Text = "Ngừng sử dụng trong tháng tới";
+            this.chbStatus.Text = "Ngừng sử dụng tháng tới";
             this.chbStatus.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(288, 261);
+            this.btnSave.Location = new System.Drawing.Point(31, 56);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(134, 37);
@@ -248,23 +251,10 @@ namespace QL_ChungCu
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnMove
-            // 
-            this.btnMove.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnMove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMove.Location = new System.Drawing.Point(666, 261);
-            this.btnMove.Name = "btnMove";
-            this.btnMove.Size = new System.Drawing.Size(167, 37);
-            this.btnMove.TabIndex = 65;
-            this.btnMove.Text = "Thanh Toán";
-            this.btnMove.UseVisualStyleBackColor = false;
-            this.btnMove.Click += new System.EventHandler(this.btnMove_Click);
-            // 
             // btnAll
             // 
             this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAll.Location = new System.Drawing.Point(711, 141);
+            this.btnAll.Location = new System.Drawing.Point(844, 80);
             this.btnAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(134, 37);
@@ -273,13 +263,35 @@ namespace QL_ChungCu
             this.btnAll.UseVisualStyleBackColor = true;
             this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(73, 546);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(456, 24);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Chú ý: Vui lòng thao tác cẩn thận... Xin cảm ơn!";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.btnSave);
+            this.groupBox1.Controls.Add(this.chbStatus);
+            this.groupBox1.Location = new System.Drawing.Point(675, 185);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(320, 112);
+            this.groupBox1.TabIndex = 67;
+            this.groupBox1.TabStop = false;
+            // 
             // FrmDichVuDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 537);
-            this.Controls.Add(this.btnMove);
-            this.Controls.Add(this.chbStatus);
+            this.ClientSize = new System.Drawing.Size(1007, 593);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbbYear);
             this.Controls.Add(this.label7);
@@ -289,7 +301,6 @@ namespace QL_ChungCu
             this.Controls.Add(this.cbbDV);
             this.Controls.Add(this.cbbMaHo);
             this.Controls.Add(this.btnDel);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnAll);
             this.Controls.Add(this.btnSearch);
@@ -298,10 +309,14 @@ namespace QL_ChungCu
             this.Controls.Add(this.txtChuHo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FrmDichVuDangKy";
-            this.Text = "FrmDichVuDangKy";
+            this.Text = "DỊCH VỤ ĐĂNG KÝ";
             this.Load += new System.EventHandler(this.FrmDichVuDangKy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridViewDV)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,7 +342,8 @@ namespace QL_ChungCu
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chbStatus;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnMove;
         private System.Windows.Forms.Button btnAll;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

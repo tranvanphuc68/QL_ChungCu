@@ -57,7 +57,7 @@ namespace QL_ChungCu
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnUpdate.Location = new System.Drawing.Point(756, 187);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(108, 36);
             this.btnUpdate.TabIndex = 0;
@@ -69,10 +69,10 @@ namespace QL_ChungCu
             // 
             this.dataGridView_KTS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_KTS.Location = new System.Drawing.Point(57, 245);
-            this.dataGridView_KTS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_KTS.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_KTS.Name = "dataGridView_KTS";
             this.dataGridView_KTS.RowHeadersWidth = 51;
-            this.dataGridView_KTS.Size = new System.Drawing.Size(993, 247);
+            this.dataGridView_KTS.Size = new System.Drawing.Size(993, 276);
             this.dataGridView_KTS.TabIndex = 1;
             // 
             // label1
@@ -91,7 +91,7 @@ namespace QL_ChungCu
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(260, 55);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 37);
             this.comboBox1.TabIndex = 3;
@@ -133,7 +133,7 @@ namespace QL_ChungCu
             // 
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txtDonGia.Location = new System.Drawing.Point(260, 97);
-            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(160, 34);
             this.txtDonGia.TabIndex = 4;
@@ -143,7 +143,7 @@ namespace QL_ChungCu
             // 
             this.txtCoTheThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txtCoTheThue.Location = new System.Drawing.Point(260, 140);
-            this.txtCoTheThue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCoTheThue.Margin = new System.Windows.Forms.Padding(4);
             this.txtCoTheThue.Name = "txtCoTheThue";
             this.txtCoTheThue.ReadOnly = true;
             this.txtCoTheThue.Size = new System.Drawing.Size(160, 34);
@@ -178,7 +178,7 @@ namespace QL_ChungCu
             this.cbxMaTaiSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cbxMaTaiSan.FormattingEnabled = true;
             this.cbxMaTaiSan.Location = new System.Drawing.Point(260, 55);
-            this.cbxMaTaiSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxMaTaiSan.Margin = new System.Windows.Forms.Padding(4);
             this.cbxMaTaiSan.Name = "cbxMaTaiSan";
             this.cbxMaTaiSan.Size = new System.Drawing.Size(160, 37);
             this.cbxMaTaiSan.TabIndex = 3;
@@ -210,7 +210,7 @@ namespace QL_ChungCu
             // 
             this.txtTenTaiSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txtTenTaiSan.Location = new System.Drawing.Point(756, 54);
-            this.txtTenTaiSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenTaiSan.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenTaiSan.Name = "txtTenTaiSan";
             this.txtTenTaiSan.Size = new System.Drawing.Size(132, 34);
             this.txtTenTaiSan.TabIndex = 4;
@@ -220,7 +220,7 @@ namespace QL_ChungCu
             // 
             this.txtDonViTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txtDonViTinh.Location = new System.Drawing.Point(756, 97);
-            this.txtDonViTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDonViTinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonViTinh.Name = "txtDonViTinh";
             this.txtDonViTinh.Size = new System.Drawing.Size(132, 34);
             this.txtDonViTinh.TabIndex = 4;
@@ -230,7 +230,7 @@ namespace QL_ChungCu
             // 
             this.txtDangChoThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txtDangChoThue.Location = new System.Drawing.Point(756, 140);
-            this.txtDangChoThue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDangChoThue.Margin = new System.Windows.Forms.Padding(4);
             this.txtDangChoThue.Name = "txtDangChoThue";
             this.txtDangChoThue.ReadOnly = true;
             this.txtDangChoThue.Size = new System.Drawing.Size(132, 34);
@@ -252,7 +252,7 @@ namespace QL_ChungCu
             // 
             this.txtNhapKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txtNhapKho.Location = new System.Drawing.Point(260, 187);
-            this.txtNhapKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhapKho.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhapKho.Name = "txtNhapKho";
             this.txtNhapKho.Size = new System.Drawing.Size(160, 34);
             this.txtNhapKho.TabIndex = 4;
@@ -262,7 +262,7 @@ namespace QL_ChungCu
             // 
             this.btnNhapKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnNhapKho.Location = new System.Drawing.Point(516, 187);
-            this.btnNhapKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNhapKho.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhapKho.Name = "btnNhapKho";
             this.btnNhapKho.Size = new System.Drawing.Size(137, 36);
             this.btnNhapKho.TabIndex = 0;
@@ -295,9 +295,11 @@ namespace QL_ChungCu
             this.Controls.Add(this.dataGridView_KTS);
             this.Controls.Add(this.btnNhapKho);
             this.Controls.Add(this.btnUpdate);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmKhoTaiSan";
-            this.Text = "FrmKhoTaiSan";
+            this.Text = "KHO TÀI SẢN";
             this.Load += new System.EventHandler(this.FrmKhoTaiSan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_KTS)).EndInit();
             this.ResumeLayout(false);

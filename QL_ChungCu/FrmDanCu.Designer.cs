@@ -42,6 +42,7 @@ namespace QL_ChungCu
             this.dtGridViewDC = new System.Windows.Forms.DataGridView();
             this.btnAll = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridViewDC)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,15 +184,27 @@ namespace QL_ChungCu
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(232, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 39);
+            this.label4.Size = new System.Drawing.Size(150, 38);
             this.label4.TabIndex = 6;
             this.label4.Text = "DÂN CƯ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(28, 504);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(456, 24);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Chú ý: Vui lòng thao tác cẩn thận... Xin cảm ơn!";
             // 
             // FrmDanCu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 494);
+            this.ClientSize = new System.Drawing.Size(640, 554);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAll);
             this.Controls.Add(this.dtGridViewDC);
@@ -205,8 +218,10 @@ namespace QL_ChungCu
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FrmDanCu";
-            this.Text = "FrmDanCu";
+            this.Text = "DÂN CƯ";
             this.Load += new System.EventHandler(this.FrmDanCu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridViewDC)).EndInit();
             this.ResumeLayout(false);
@@ -229,5 +244,6 @@ namespace QL_ChungCu
         private System.Windows.Forms.DataGridView dtGridViewDC;
         private System.Windows.Forms.Button btnAll;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

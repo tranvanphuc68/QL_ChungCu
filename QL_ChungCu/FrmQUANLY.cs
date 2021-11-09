@@ -64,16 +64,6 @@ namespace QL_ChungCu
         {
         }
 
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
-
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
-        }
-
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.Cascade);
@@ -100,6 +90,78 @@ namespace QL_ChungCu
             {
                 childForm.Close();
             }
+        }
+
+        private void hỘDÂNToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmHoDan frm = new FrmHoDan();
+            frm.Show();
+        }
+
+        private void dÂNCƯToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDanCu frm = new FrmDanCu();
+            frm.Show();
+        }
+
+        private void mẶTBẰNGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMatBang frm = new FrmMatBang();
+            frm.Show();
+        }
+
+        private void đĂNGKÝToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDichVuDangKy frm = new FrmDichVuDangKy();
+            frm.Show();
+        }
+
+        private void tHANHTOÁNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmThanhToanDichVu frm = new FrmThanhToanDichVu();
+            frm.Show();
+        }
+
+        private void tHÔNGTINToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmThongTinDichVu frm = new FrmThongTinDichVu();
+            frm.Show();
+        }
+
+        private void kHOTÀISẢNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmKhoTaiSan frm = new FrmKhoTaiSan();
+            frm.Show();
+        }
+
+        private void hỢPĐỒNGTHUÊToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmHopDongThue frm = new FrmHopDongThue();
+            frm.Show();
+        }
+
+        private void bÃIXEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBaiDoXe frm = new FrmBaiDoXe();
+            frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmDichVuDangKy frm = new FrmDichVuDangKy();
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmHopDongThue frm = new FrmHopDongThue();
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmBaiDoXe frm = new FrmBaiDoXe();
+            frm.Show();
         }
     }
 }

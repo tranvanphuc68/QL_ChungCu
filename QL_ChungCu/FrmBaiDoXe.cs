@@ -16,7 +16,9 @@ namespace QL_ChungCu
             InitializeComponent();
         }
 
-        string dtb = @"Data Source=LAPTOP-GL3J5C27\SQLEXPRESS;Initial Catalog=PARKING;Integrated Security=True";
+        KetNoi connect = new KetNoi();
+        string dtb = new KetNoi().dtb;
+
         SqlConnection conn;
         SqlCommand cmd;
         SqlDataAdapter adapter = new SqlDataAdapter();
@@ -28,7 +30,7 @@ namespace QL_ChungCu
         void load_In()
         {
             cmd = conn.CreateCommand();
-            cmd.CommandText = "select * from XeVao";
+            cmd.CommandText = "select id as 'Biển số', uid, type as 'Loại', fee as 'Phí', timeIn as 'Thời gian vào' from Xe_vao order by timeIn desc";
             adapter.SelectCommand = cmd;
             table_In.Clear();
             adapter.Fill(table_In);
@@ -38,7 +40,7 @@ namespace QL_ChungCu
         void load_Out()
         {
             cmd = conn.CreateCommand();
-            cmd.CommandText = "select * from XeRa";
+            cmd.CommandText = "select id as 'Biển số', type as 'Loại', timeOut as 'Thời gian ra' from Xe_ra order by timeOut desc";
             adapter.SelectCommand = cmd;
             table_Out.Clear();
             adapter.Fill(table_Out);
@@ -48,10 +50,10 @@ namespace QL_ChungCu
         void blank()
         {
             cmd = conn.CreateCommand();
-            cmd.CommandText = "select count(*) from XeVao where type = " + "'Xe Máy'";
+            cmd.CommandText = "select count(*) from Xe_vao where type = " + "'Xe Máy'";
             Int32 motor_count = (Int32)cmd.ExecuteScalar();
             int motor = 200 - motor_count;
-            cmd.CommandText = "select count(*) from XeVao where type = " + "'Ô tô'";
+            cmd.CommandText = "select count(*) from Xe_vao where type = " + "'Ô tô'";
             Int32 car_count = (Int32)cmd.ExecuteScalar();
             int car = 100 - car_count;
             Car.Text = car.ToString();
@@ -79,9 +81,21 @@ namespace QL_ChungCu
                 MessageBox.Show("Yêu cầu nhập đầy đủ");
                 goto end;
             }
-            cmd = conn.CreateCommand();
-            cmd.CommandText = "insert into XeVao(uid,id,type,fee,timeIn) values('" + uid.Text + "','" + id.Text + "','" + type.Text + "'," + fee + ",'" + timeIn.ToString() + "')";
-            cmd.ExecuteNonQuery();
+            else
+            {
+                SqlCommand cmd = new SqlCommand("select uid from Xe_vao where uid = '" + uid.Text + "' group by uid", conn);
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                
+                if (reader.Read() == true)
+                {   
+                    MessageBox.Show("Nhập UID khác");
+                    reader.Close();
+                    goto end;
+                }
+                reader.Close();
+            }
+            connect.Thuc_thi("insert into Xe_vao(uid,id,type,fee,timeIn) values('" + uid.Text + "','" + id.Text + "','" + type.Text + "'," + fee + ",'" + timeIn.ToString() + "')");
             blank();
             uid.ResetText();
             id.ResetText();
@@ -90,18 +104,17 @@ namespace QL_ChungCu
         }
 
         private void xeRa_Click(object sender, EventArgs e)
-        {
-            cmd = conn.CreateCommand();
-            cmd.CommandText = "select * from XeVao where uid = '" + checkUID.Text + "'";
-            adapter.SelectCommand = cmd;
-            table_In.Clear();
-            adapter.Fill(table_In);
-            if (table_In.Rows.Count == 1)  //kiểm tra tồn tại xe
+        {   
+            SqlCommand cmd = new SqlCommand("select * from Xe_vao where uid = '" + checkUID.Text + "'", conn);
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+            if (reader.Read() == true) 
             {
-                checkID.Text = viewIn.Rows[0].Cells[1].Value.ToString();
-                checkType.Text = viewIn.Rows[0].Cells[2].Value.ToString();
-                checkFee.Text = viewIn.Rows[0].Cells[3].Value.ToString();
+                checkID.Text = (string)reader["id"].ToString();
+                checkType.Text = (string)reader["type"].ToString();
+                checkFee.Text = (string)reader["fee"].ToString();
             }
+            reader.Close();
             load_In();
         }
 
@@ -113,11 +126,8 @@ namespace QL_ChungCu
                 goto end;
             }
             DateTime timeOut = DateTime.Now;
-            cmd = conn.CreateCommand();
-            cmd.CommandText = "insert into XeRa(id,type,timeOut) values('" + checkID.Text + "','" + checkType.Text + "','" + timeOut.ToString() + "')";
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = "delete from XeVao where id = '" + checkID.Text + "'";
-            cmd.ExecuteNonQuery();
+            connect.Thuc_thi("insert into Xe_ra(id,type,timeOut) values('" + checkID.Text + "','" + checkType.Text + "','" + timeOut.ToString() + "')");
+            connect.Thuc_thi("delete from Xe_vao where id = '" + checkID.Text + "'");
             blank();
             load_In();
             load_Out();

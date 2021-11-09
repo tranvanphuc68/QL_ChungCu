@@ -120,6 +120,7 @@ namespace QL_ChungCu
             // 
             // type
             // 
+            this.type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.type.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.type.FormattingEnabled = true;
             this.type.Items.AddRange(new object[] {
@@ -146,23 +147,23 @@ namespace QL_ChungCu
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 71);
+            this.label2.Location = new System.Drawing.Point(31, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 22);
+            this.label2.Size = new System.Drawing.Size(85, 22);
             this.label2.TabIndex = 10;
-            this.label2.Text = "ID";
+            this.label2.Text = "BIỂN SỐ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 113);
+            this.label3.Location = new System.Drawing.Point(31, 111);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 22);
+            this.label3.Size = new System.Drawing.Size(86, 22);
             this.label3.TabIndex = 11;
-            this.label3.Text = "TYPE";
+            this.label3.Text = "LOẠI XE";
             // 
             // checkUID
             // 
@@ -210,23 +211,23 @@ namespace QL_ChungCu
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 171);
+            this.label5.Location = new System.Drawing.Point(30, 170);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 22);
+            this.label5.Size = new System.Drawing.Size(86, 22);
             this.label5.TabIndex = 17;
-            this.label5.Text = "TYPE";
+            this.label5.Text = "LOẠI XE";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(72, 128);
+            this.label6.Location = new System.Drawing.Point(30, 127);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 22);
+            this.label6.Size = new System.Drawing.Size(85, 22);
             this.label6.TabIndex = 18;
-            this.label6.Text = "ID";
+            this.label6.Text = "BIỂN SỐ";
             // 
             // checkFee
             // 
@@ -245,9 +246,9 @@ namespace QL_ChungCu
             this.label7.Location = new System.Drawing.Point(72, 210);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 22);
+            this.label7.Size = new System.Drawing.Size(42, 22);
             this.label7.TabIndex = 20;
-            this.label7.Text = "FEE";
+            this.label7.Text = "PHÍ";
             // 
             // checkXeRa
             // 
@@ -384,7 +385,7 @@ namespace QL_ChungCu
             this.label10.TabIndex = 31;
             this.label10.Text = "DANH SÁCH XE RA";
             // 
-            // QuanLy
+            // FrmBaiDoXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -400,9 +401,12 @@ namespace QL_ChungCu
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.viewOut);
             this.Controls.Add(this.viewIn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "QuanLy";
-            this.Text = "Quản Lý Bãi";
+            this.MaximizeBox = false;
+            this.Name = "FrmBaiDoXe";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Text = "BÃI ĐỖ XE";
             this.Load += new System.EventHandler(this.QuanLy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.viewIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewOut)).EndInit();

@@ -12,11 +12,10 @@ namespace QL_ChungCu
         public SqlCommand cmd;
         public SqlDataAdapter adapter = new SqlDataAdapter();
         public DataTable table = new DataTable();
-
+        public string dtb = @"Data Source=LAPTOP-GL3J5C27\SQLEXPRESS;Initial Catalog=QLCC;Integrated Security=True";
 
         public void Ket_noi()
         {
-            string dtb = "";
             conn = new SqlConnection(dtb);
             conn.Open();
         }

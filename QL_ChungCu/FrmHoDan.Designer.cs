@@ -48,7 +48,7 @@ namespace QL_ChungCu
             // 
             this.txtMaHo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txtMaHo.Location = new System.Drawing.Point(348, 92);
-            this.txtMaHo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaHo.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaHo.Name = "txtMaHo";
             this.txtMaHo.Size = new System.Drawing.Size(220, 34);
             this.txtMaHo.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace QL_ChungCu
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSearch.Location = new System.Drawing.Point(625, 122);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 37);
             this.btnSearch.TabIndex = 1;
@@ -82,7 +82,7 @@ namespace QL_ChungCu
             this.cbxMaMatBang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cbxMaMatBang.FormattingEnabled = true;
             this.cbxMaMatBang.Location = new System.Drawing.Point(348, 146);
-            this.cbxMaMatBang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxMaMatBang.Margin = new System.Windows.Forms.Padding(4);
             this.cbxMaMatBang.Name = "cbxMaMatBang";
             this.cbxMaMatBang.Size = new System.Drawing.Size(220, 37);
             this.cbxMaMatBang.TabIndex = 3;
@@ -91,10 +91,10 @@ namespace QL_ChungCu
             // 
             this.dataGridView_HD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_HD.Location = new System.Drawing.Point(177, 268);
-            this.dataGridView_HD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_HD.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_HD.Name = "dataGridView_HD";
             this.dataGridView_HD.RowHeadersWidth = 51;
-            this.dataGridView_HD.Size = new System.Drawing.Size(547, 185);
+            this.dataGridView_HD.Size = new System.Drawing.Size(547, 237);
             this.dataGridView_HD.TabIndex = 4;
             // 
             // label2
@@ -112,7 +112,7 @@ namespace QL_ChungCu
             // 
             this.txtTenChuHo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.txtTenChuHo.Location = new System.Drawing.Point(348, 207);
-            this.txtTenChuHo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenChuHo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenChuHo.Name = "txtTenChuHo";
             this.txtTenChuHo.Size = new System.Drawing.Size(220, 34);
             this.txtTenChuHo.TabIndex = 0;
@@ -143,7 +143,7 @@ namespace QL_ChungCu
             // 
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnCreate.Location = new System.Drawing.Point(625, 78);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(100, 37);
             this.btnCreate.TabIndex = 1;
@@ -155,7 +155,7 @@ namespace QL_ChungCu
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnDelete.Location = new System.Drawing.Point(625, 166);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 37);
             this.btnDelete.TabIndex = 1;
@@ -167,7 +167,7 @@ namespace QL_ChungCu
             // 
             this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnView.Location = new System.Drawing.Point(625, 210);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(100, 37);
             this.btnView.TabIndex = 5;
@@ -192,9 +192,11 @@ namespace QL_ChungCu
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtMaHo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmHoDan";
-            this.Text = "FrmHoDan";
+            this.Text = "HỘ DÂN";
             this.Load += new System.EventHandler(this.FrmHoDan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HD)).EndInit();
             this.ResumeLayout(false);

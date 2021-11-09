@@ -20,7 +20,7 @@ namespace QL_ChungCu
 
         KetNoi conn = new KetNoi();
 
-        public string dtb = @"";
+        string dtb = new KetNoi().dtb;
         SqlConnection connect;
         public void Load_DanCu()
         {

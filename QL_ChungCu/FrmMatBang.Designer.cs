@@ -47,18 +47,20 @@ namespace QL_ChungCu
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(312, 18);
+            this.label1.Location = new System.Drawing.Point(416, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 24);
+            this.label1.Size = new System.Drawing.Size(137, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "MẶT BẰNG";
             // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnUpdate.Location = new System.Drawing.Point(467, 57);
+            this.btnUpdate.Location = new System.Drawing.Point(623, 70);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(100, 36);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -67,18 +69,21 @@ namespace QL_ChungCu
             // dataGridView_MB
             // 
             this.dataGridView_MB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_MB.Location = new System.Drawing.Point(78, 214);
+            this.dataGridView_MB.Location = new System.Drawing.Point(104, 263);
+            this.dataGridView_MB.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_MB.Name = "dataGridView_MB";
-            this.dataGridView_MB.Size = new System.Drawing.Size(464, 150);
+            this.dataGridView_MB.RowHeadersWidth = 51;
+            this.dataGridView_MB.Size = new System.Drawing.Size(619, 247);
             this.dataGridView_MB.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.Location = new System.Drawing.Point(87, 57);
+            this.label2.Location = new System.Drawing.Point(116, 70);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 24);
+            this.label2.Size = new System.Drawing.Size(157, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã mặt bằng:";
             // 
@@ -86,36 +91,40 @@ namespace QL_ChungCu
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.Location = new System.Drawing.Point(87, 93);
+            this.label3.Location = new System.Drawing.Point(116, 114);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 24);
+            this.label3.Size = new System.Drawing.Size(112, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "Diện tích:";
             // 
             // txtDienTich
             // 
             this.txtDienTich.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtDienTich.Location = new System.Drawing.Point(232, 90);
+            this.txtDienTich.Location = new System.Drawing.Point(309, 111);
+            this.txtDienTich.Margin = new System.Windows.Forms.Padding(4);
             this.txtDienTich.Name = "txtDienTich";
-            this.txtDienTich.Size = new System.Drawing.Size(169, 29);
+            this.txtDienTich.Size = new System.Drawing.Size(224, 34);
             this.txtDienTich.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label4.Location = new System.Drawing.Point(87, 128);
+            this.label4.Location = new System.Drawing.Point(116, 158);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 24);
+            this.label4.Size = new System.Drawing.Size(102, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "Đơn giá:";
             // 
             // txtDonGia
             // 
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtDonGia.Location = new System.Drawing.Point(232, 125);
+            this.txtDonGia.Location = new System.Drawing.Point(309, 154);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(169, 29);
+            this.txtDonGia.Size = new System.Drawing.Size(224, 34);
             this.txtDonGia.TabIndex = 1;
             // 
             // cbxMaMatBang
@@ -123,9 +132,10 @@ namespace QL_ChungCu
             this.cbxMaMatBang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMaMatBang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cbxMaMatBang.FormattingEnabled = true;
-            this.cbxMaMatBang.Location = new System.Drawing.Point(232, 52);
+            this.cbxMaMatBang.Location = new System.Drawing.Point(309, 64);
+            this.cbxMaMatBang.Margin = new System.Windows.Forms.Padding(4);
             this.cbxMaMatBang.Name = "cbxMaMatBang";
-            this.cbxMaMatBang.Size = new System.Drawing.Size(169, 32);
+            this.cbxMaMatBang.Size = new System.Drawing.Size(224, 37);
             this.cbxMaMatBang.TabIndex = 4;
             this.cbxMaMatBang.SelectedIndexChanged += new System.EventHandler(this.cbxMaMatBang_SelectedIndexChanged);
             // 
@@ -133,26 +143,28 @@ namespace QL_ChungCu
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label5.Location = new System.Drawing.Point(87, 165);
+            this.label5.Location = new System.Drawing.Point(116, 203);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 24);
+            this.label5.Size = new System.Drawing.Size(127, 29);
             this.label5.TabIndex = 0;
             this.label5.Text = "Trạng thái:";
             // 
             // txtTrangThai
             // 
             this.txtTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtTrangThai.Location = new System.Drawing.Point(232, 162);
+            this.txtTrangThai.Location = new System.Drawing.Point(309, 199);
+            this.txtTrangThai.Margin = new System.Windows.Forms.Padding(4);
             this.txtTrangThai.Name = "txtTrangThai";
             this.txtTrangThai.ReadOnly = true;
-            this.txtTrangThai.Size = new System.Drawing.Size(169, 29);
+            this.txtTrangThai.Size = new System.Drawing.Size(224, 34);
             this.txtTrangThai.TabIndex = 1;
             // 
             // FrmMatBang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(922, 554);
             this.Controls.Add(this.cbxMaMatBang);
             this.Controls.Add(this.dataGridView_MB);
             this.Controls.Add(this.btnUpdate);
@@ -164,8 +176,11 @@ namespace QL_ChungCu
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmMatBang";
-            this.Text = "FrmMatBang";
+            this.Text = "MẶT BẰNG";
             this.Load += new System.EventHandler(this.FrmMatBang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MB)).EndInit();
             this.ResumeLayout(false);

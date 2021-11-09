@@ -50,6 +50,7 @@ namespace QL_ChungCu
             this.txtThanhToan = new System.Windows.Forms.TextBox();
             this.txtMaHDDV = new System.Windows.Forms.TextBox();
             this.btnAll = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridViewDV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,7 +160,7 @@ namespace QL_ChungCu
             this.dtGridViewDV.Margin = new System.Windows.Forms.Padding(4);
             this.dtGridViewDV.Name = "dtGridViewDV";
             this.dtGridViewDV.RowHeadersWidth = 51;
-            this.dtGridViewDV.Size = new System.Drawing.Size(823, 220);
+            this.dtGridViewDV.Size = new System.Drawing.Size(823, 288);
             this.dtGridViewDV.TabIndex = 71;
             this.dtGridViewDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridViewDV_CellContentClick);
             // 
@@ -278,11 +279,23 @@ namespace QL_ChungCu
             this.btnAll.UseVisualStyleBackColor = true;
             this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(134, 598);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(456, 24);
+            this.label5.TabIndex = 85;
+            this.label5.Text = "Chú ý: Vui lòng thao tác cẩn thận... Xin cảm ơn!";
+            // 
             // FrmThanhToanDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 549);
+            this.ClientSize = new System.Drawing.Size(1088, 638);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnAll);
             this.Controls.Add(this.txtMaHDDV);
             this.Controls.Add(this.chbStatus);
@@ -304,8 +317,10 @@ namespace QL_ChungCu
             this.Controls.Add(this.txtChuHo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FrmThanhToanDichVu";
-            this.Text = "FrmThanhToanDichVu";
+            this.Text = "THANH TOÁN DỊCH VỤ";
             this.Load += new System.EventHandler(this.FrmThanhToanDichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridViewDV)).EndInit();
             this.ResumeLayout(false);
@@ -335,5 +350,6 @@ namespace QL_ChungCu
         private System.Windows.Forms.TextBox txtThanhToan;
         private System.Windows.Forms.TextBox txtMaHDDV;
         private System.Windows.Forms.Button btnAll;
+        private System.Windows.Forms.Label label5;
     }
 }
