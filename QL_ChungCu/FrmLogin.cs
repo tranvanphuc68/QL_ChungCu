@@ -15,12 +15,12 @@ namespace QL_ChungCu
         {
             InitializeComponent();
         }
+        string dtb = new KetNoi().dtb;
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            string dtb = @"";
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            string query = "Select * from ADMIN where ... = '" + username + "' AND ... = '" + password + "'";
+            string query = "Select * from Admin where id = '" + username + "' AND pass = '" + password + "'";
             SqlConnection conn = new SqlConnection(dtb);
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);

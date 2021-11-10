@@ -55,18 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrystalReport2.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmBaiDoXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +109,36 @@
     <Compile Include="FrmQUANLY.Designer.cs">
       <DependentUpon>FrmQUANLY.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRPDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRPDien.Designer.cs">
+      <DependentUpon>FrmRPDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRPHoDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRPHoDan.Designer.cs">
+      <DependentUpon>FrmRPHoDan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRPKhoTaiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRPKhoTaiSan.Designer.cs">
+      <DependentUpon>FrmRPKhoTaiSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRPNuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRPNuoc.Designer.cs">
+      <DependentUpon>FrmRPNuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRPThueTaiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRPThueTaiSan.Designer.cs">
+      <DependentUpon>FrmRPThueTaiSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmThanhToanDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,13 +154,36 @@
     <Compile Include="KetNoi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CrystalReport2.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="RptDien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptHoDan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptHoDan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptKhoTaiSan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptKhoTaiSan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptNuoc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptNuoc.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptThueTaiSan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptThueTaiSan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="FrmBaiDoXe.resx">
       <DependentUpon>FrmBaiDoXe.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +208,21 @@
     <EmbeddedResource Include="FrmQUANLY.resx">
       <DependentUpon>FrmQUANLY.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRPDien.resx">
+      <DependentUpon>FrmRPDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRPHoDan.resx">
+      <DependentUpon>FrmRPHoDan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRPKhoTaiSan.resx">
+      <DependentUpon>FrmRPKhoTaiSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRPNuoc.resx">
+      <DependentUpon>FrmRPNuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRPThueTaiSan.resx">
+      <DependentUpon>FrmRPThueTaiSan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmThanhToanDichVu.resx">
       <DependentUpon>FrmThanhToanDichVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +242,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RptDien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDien.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptHoDan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptHoDan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptKhoTaiSan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptKhoTaiSan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptNuoc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptNuoc.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptThueTaiSan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptThueTaiSan.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

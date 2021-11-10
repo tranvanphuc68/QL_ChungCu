@@ -16,14 +16,14 @@ namespace QL_ChungCu {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport2 : ReportClass {
+    public class RptDien : ReportClass {
         
-        public CrystalReport2() {
+        public RptDien() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport2.rpt";
+                return "RptDien.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace QL_ChungCu {
         
         public override string FullResourceName {
             get {
-                return "QL_ChungCu.CrystalReport2.rpt";
+                return "QL_ChungCu.RptDien.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace QL_ChungCu {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport2 : Component, ICachedReport {
+    public class CachedRptDien : Component, ICachedReport {
         
-        public CachedCrystalReport2() {
+        public CachedRptDien() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace QL_ChungCu {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport2 rpt = new CrystalReport2();
+            RptDien rpt = new RptDien();
             rpt.Site = this.Site;
             return rpt;
         }

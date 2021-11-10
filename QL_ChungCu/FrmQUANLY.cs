@@ -163,5 +163,35 @@ namespace QL_ChungCu
             FrmBaiDoXe frm = new FrmBaiDoXe();
             frm.Show();
         }
+
+        private void dỊCHVỤĐIỆNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRPDien frm = new FrmRPDien();
+            frm.Show();
+        }
+
+        private void dỊCHVỤNƯỚCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRPNuoc frm = new FrmRPNuoc();
+            frm.Show();
+        }
+
+        private void kHOTÀISẢNToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmRPKhoTaiSan frm = new FrmRPKhoTaiSan();
+            frm.Show();
+        }
+
+        private void hỘDÂNToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FrmRPHoDan frm = new FrmRPHoDan();
+            frm.Show();
+        }
+
+        private void dỊCHVỤTHUÊTSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRPThueTaiSan frm = new FrmRPThueTaiSan();
+            frm.Show();
+        }
     }
 }

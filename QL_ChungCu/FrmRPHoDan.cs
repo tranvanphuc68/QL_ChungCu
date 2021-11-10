@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace QL_ChungCu
 {
-    public partial class Form1 : Form
+    public partial class FrmRPHoDan : Form
     {
-        public Form1()
+        public FrmRPHoDan()
         {
             InitializeComponent();
         }
